@@ -22,10 +22,6 @@ Welcome to my personal website! My name is Sean Fox and I am a web developer cur
 The following technologies were used in the development of this website:
 - HTML
 - CSS
-- JavaScript
-- node.js
-- Telegraf
-- OpenAI
 
 ## Content
 This website contains the following sections:
@@ -47,7 +43,7 @@ The work section features several of my completed projects. Each project include
 The contact me section provides links to my Telegram, LinkedIn, email, and GitHub accounts.
 
 ## Deployed Link
-The deployed link to this website can be found here: [Sean Fox // Web Developer](https://drgunbot.github.io/)
+The deployed link to this website can be found here: [Sean Fox // Web Developer](https://drgunbot.github.io/My-Portfolio)
 
 ## Contact Me
 If you would like to connect or chat, please feel free to reach out to me via one of the following links:
