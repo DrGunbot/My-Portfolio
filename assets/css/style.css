@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Shades of green */
+:root {
+  --primary-color: #345f43;
+  --secondary-color: #66bb6a;
+}
+
+/* Reset margin and padding on the body and set font styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Reset margin on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Reset margin on paragraphs */
+p {
+  margin: 0;
+}
+
+/* Style for the header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  position: relative;
+  z-index: 1;
+}
+
+/* Style for navigation links */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Style for hero banner */
+.hero-banner {
+  height: 4rem;
+  background-image: url('../../assets/images/02-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.hero-banner h2 {
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  align-items: left;
+}
+
+/* Style for the main content wrapper */
+.page-wrapper {
+  padding: 2rem;
+}
+
+/* Style for photo section */
+.photo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.photo-section img {
+  border-radius: 50%;
+  height: 280px;
+  width: 280px;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for each section of the page */
+.page-section {
+  margin-bottom: 2rem;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+/* Style for each section title */
+.page-section h2 {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  background-color: var(--secondary-color);
+  padding: 0.25rem 1rem;
+  border-radius: 0 1rem 1rem 0;
+}
+
+/* Style for project container */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Styles for a project item */
+.project {
+  min-width: 250px;
+  max-width: 400px;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin: 1rem;
+  position: relative;
+}
+
+/* Styles for a project item's image */
+.project img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+/* Styles for a featured project */
+.project-featured {
+  flex: 100%;
+  max-width: 100%;
+}
+
+/* Styles for a non-featured project */
+.project:not(.project-featured) {
+  flex: 1;
+}
+
+/* Styles for when hovering over a project */
+.project:hover {
+  transform: translateY(-5px);
+}
+
+/* Styles for a link within a project */
+.project a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: block;
+}
+
+/* Styles for information within a project */
+.project-info {
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  transform: translateY(50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 0 1rem 1rem 0;
+}
+
+/* Styles for a project's header within the project info */
+.project-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Styles for a project's paragraph within the project info */
+.project-info p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+}
+
+/* Styles for the project info when hovering over a link within a project */
+.project a:hover .project-info {
+  background-color: rgba(24, 188, 156, 0.7);
+}
+
+/* Styles for a contact section */
+.contact {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* Styles for a contact section's links */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Styles for a contact section's link icons */
+.contact-links img {
+  width: 4px;
+  height: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Styles for a contact section's link icons when hovering */
+.contact-links img:hover {
+  transform: scale(0.2);
+}
+
+/* Styles for a contact section's container */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Styles for a contact section's icon */
+.contact-icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* Styles for non-featured projects when the screen size is less than 769px */
+@media screen and (max-width: 768px) {
+  .project:not(.project-featured) {
+    flex-basis: 100%;
+  }
+}
+
+/* Styles for non-featured projects when the screen size is between 769px and 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .project:not(.project-featured) {
+    flex-basis: 48%;
+  }
+}
+
+/* Styles for non-featured projects when the screen size is greater than 1024px */
+@media screen and (min-width: 1025px) {
+  .project:not(.project-featured) {
+    flex-basis: 32%;
+  }
+}
